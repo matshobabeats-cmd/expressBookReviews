@@ -38,9 +38,7 @@ public_users.get('/author/:author', function (req, res) {
 
   Object.keys(books).forEach(key => {
 
-    if (
-      books[key].author.toLowerCase() === author.toLowerCase()
-    ) {
+    if (books[key].author.toLowerCase() === author.toLowerCase()) {
       result.push(books[key]);
     }
 
@@ -59,9 +57,7 @@ public_users.get('/title/:title', function (req, res) {
 
   Object.keys(books).forEach(key => {
 
-    if (
-      books[key].title.toLowerCase() === title.toLowerCase()
-    ) {
+    if (books[key].title.toLowerCase() === title.toLowerCase()) {
       result.push(books[key]);
     }
 
@@ -76,9 +72,7 @@ public_users.get('/review/:isbn', function (req, res) {
 
   const isbn = req.params.isbn;
 
-  return res.json(
-    books[isbn].reviews
-  );
+  return res.json(books[isbn].reviews);
 
 });
 
